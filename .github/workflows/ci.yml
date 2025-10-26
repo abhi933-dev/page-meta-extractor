@@ -1,0 +1,20 @@
+name: Java CI using Custom Action
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run custom Java build action
+        uses: ./.github/actions/build-java
+        with:
+          java-version: '17'
