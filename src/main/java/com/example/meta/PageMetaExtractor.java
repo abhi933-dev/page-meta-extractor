@@ -88,7 +88,8 @@ public class PageMetaExtractor {
         return isBlank(s) ? null : s;
     }
 
-    private static final Pattern BYLINE = Pattern.compile("\b[Bb]y\s+([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+){0,3})\b");
+    // ✅ Fixed regex (escaped correctly)
+    private static final Pattern BYLINE = Pattern.compile("\\b[Bb]y\\s+([A-Z][A-Za-z.'\\-]+(?:\\s+[A-Z][A-Za-z.'\\-]+){0,3})\\b");
 
     private static String authorFromBylineHeuristic(Document doc) {
         List<String> selectorCandidates = List.of(
