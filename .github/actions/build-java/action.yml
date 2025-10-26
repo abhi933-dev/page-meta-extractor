@@ -19,6 +19,8 @@ runs:
 
     - name: Build project
       run: mvn -B package --file pom.xml
+      shell: bash
 
     - name: Run tests
       run: mvn test
+      shell: bash
