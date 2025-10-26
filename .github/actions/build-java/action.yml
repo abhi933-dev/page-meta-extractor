@@ -1,6 +1,6 @@
 name: "Build Java Project"
 description: "Compiles and tests a Java project using Maven"
-author: "Your Name"
+author: "Abhilash"
 
 inputs:
   java-version:
