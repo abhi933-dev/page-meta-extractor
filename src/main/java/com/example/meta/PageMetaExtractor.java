@@ -129,4 +129,3 @@ public class PageMetaExtractor {
         System.out.println(om.writerWithDefaultPrettyPrinter().writeValueAsString(root));
     }
 }
-}

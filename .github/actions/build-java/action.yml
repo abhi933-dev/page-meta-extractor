@@ -24,3 +24,10 @@ runs:
     - name: Run tests
       run: mvn test
       shell: bash
+
+    - name: Upload test report
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-report
+        path: target/surefire-reports/
+
